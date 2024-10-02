@@ -68,3 +68,41 @@ ssh-keygen：（几点没人讲的说明：）
 删除.ssh文件夹中的config文件，重启vscode，再操作一遍就会“添加新的ssh主机..."选项
 
 # 麻烦：要是有多个主机，这样删除就比较麻烦，需要重新配置一遍，所以备分完成再删除，等成功了再把主机信息再添加回config文件可能是个补救的办法。
+
+---
+---
+---
+# 入门岛第三关用到的几个命令：
+1、一定要先在开发机里建个目录，不然会比较乱，然后在github上fork完项目克隆到远程的开发机里：git clone 地址
+
+2、进入到Tutorial目录执行git branch -a 查看所有分支信息，确保自己是在camp3分枝上，当前所在分枝前面有个“*”标志
+
+3.然后就是基于这个分枝建一个新分枝：git checkout -b camp3_XXXID origin/camp3
+
+4、建完分枝再按要求在data/Git/task/下面建一个mk文件：touch ./data/Git/task/camp3_xxxid.md ,并填上相应的自我介绍，ctal+s保存。
+
+5、三步曲：
+    提交缓存: git add . 
+    送入本地代码库（在开发机上）：git commit -m "add git_xxxid_introduction"
+    推到远程githup上你自己fork的库上：git push origin camp3_XXXID
+    完活儿！！
+
+
+# <u>最后说下踩过的几个大坑或是疑惑</u>
+##  1、git push origin camp3_XXXID完你就可以打开githup你fork的仓库看到提示了,如果是首次提交分支，你会看到红框的提示信息，如果这个分枝再有提交，就没有了红框，只有绿框提示了，但点1 commit ahead of 字样你一样可以新建PR,这坑我迷了两个小时！
+![alt text](image-8.png)
+
+## 2、 点完,你会看到编辑PR的界面，一般前面的基础分枝你不用选，你主要选后面的对比分枝就行了，最后填好信息点下面的creat pull request就行了！
+![alt text](image-9.png) 
+
+## 3、 最要命的点：我迷了三个小时：
+    你点完creat pull request按纽，这个黄框是一闪而过的，一般不会，一般需要等着主分枝同意合并你的PR才行，但活动小组应该是设置了自动审核通过，所以，，，所以，，，这个一闪就过了，代表你直接合进了原仓库的主分枝里了！！！！
+![alt text](image-10.png)
+
+    闪过之后你会看到下面的界面：意思就是你的PR被通过并合进了原仓库的主分枝里了！！！！过家家就是快呀！！
+![alt text](image-11.png)
+
+    你可以到原仓库地址PR页就看能看到你的那个被通过的PR啦!！！记住：：只有在此时你才需要到原仓库操作，之前几步除了fork那个动作以外，你都是在你自己的ID下刚fork的界面内操作才能看到相应的结果。
+![alt text](image-12.png)
+
+    这就意味着你入门岛第三关，完成啦，哈哈哈，，，，
